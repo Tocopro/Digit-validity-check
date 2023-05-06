@@ -111,4 +111,54 @@ int main()
 }
 
 
+#include <iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    int number ;
+    int positiveNumber = 0;
+    int negativeNumber = 0;
+
+    int positiveCount = 0;
+    int negativeCount = 0;
+    int count = 0;
+    for(int i = 1; i <= 3; i++)
+    {
+        cout << "Enter a Number positive or negative \n";
+        cin >> number;
+        cout << "Number entered is " << number << "\n";
+        if(number > 0) positiveCount++;
+        int num1 = number;
+        {positiveNumber= num1+ positiveNumber;
+            cout << positiveNumber << "\n";
+        }
+        if(number < 0) negativeCount++;
+        int num2 = number;
+        {negativeNumber = num2 + negativeNumber;
+        cout << negativeNumber << "\n";
+        }
+        count++;
+        cout << "Current input is " << count << "\n";
+    }
+    cout << "Positive Count ( " << positiveCount << " ) \n";
+    cout << "Negative Count ( " << negativeCount << " ) \n";
+    char response;
+    cout << "Do you want the positive or negative count?";
+    cin >> response;
+    if(response == 'p')
+    {
+        cout << "Positive count is " << positiveCount << "\n";
+    }
+    if (response == 'n')
+    {
+        cout << "Negative count is " << negativeCount << "\n";
+    }
+    cout << positiveNumber << " Sum of all Positive Numbers\n";
+    cout << negativeNumber << " Sum of all Negative Numbers\n";
+
+    return 0;
+}
+
 
